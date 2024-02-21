@@ -126,7 +126,7 @@ by Martin Kleppmann
 
 ##### Relational Versus Document Databases Today
 
-* The document data model offers greater schema flexibility, better performance from locality, and for some applications it is closer to the data structures used by the application.
+* The document data model offers greater schema flexibility and better performance from the locality, and for some applications, it is closer to the data structures used by the application.
 * The relational model offers better support for joins, and many-to-one and many-to-many relationships.
 
 ###### Which data model leads to simpler application code?
@@ -181,6 +181,12 @@ by Martin Kleppmann
 * Datalog generalizes the triple-store model, writing the triple as _predicate(subject, object)_.
 * A Datalog rule applies if the system can find a match for _all_ predicates on the right side of the `:-` operator.
 * When a rule applies, it's as though the left side of the `:-` was added to the database, with variables replaced by the values they matched.
+
+
+<img width="1261" alt="image" src="https://github.com/abhishekwaichal/book-notes/assets/4141167/11205bda-a2ad-4fb2-855a-609ad3133878">
+
+
+
 
 ### Chapter 3: Storage and Retrieval
 
