@@ -1,6 +1,8 @@
-## Designing Data-Intensive Applications
+# Designing Data-Intensive Applications
 
 by Martin Kleppmann
+
+## Part 1 - useful to teach you how to pick data stores  (Chapters 1-4)
 
 ### Chapter 1: Reliable, Scalable, and Maintainable Applications
 
@@ -474,9 +476,12 @@ by Martin Kleppmann
 * In a *distributed actor framework*, location transparency works better than with RPC, because the actor model already assumes that messages may be lost.
 * A distributed actor framework essentially integrates a message broker and the actor programming model into a single framework.
 
+
+## Part 2 - Will dispel your fears of sharding and choosing a replication mechanism (Chapters 5-9)
+
 ### Chapter 5: Replication
 
-* Reasons to replicate data include reducing access latency by moving data geographically close to users, increasing availability, and increasing read throughput.
+* Reasons to replicate data include reducing access latency by moving data geographically close to users, increasing availability, and increasing read-throughput.
 * All the difficulty in replication lies in handling *changes* to replicated data.
 
 #### Leaders and Followers
@@ -1444,6 +1449,9 @@ by Martin Kleppmann
 
 * ZooKeeper, etc, and consul are often used for *service discovery*, which returns the set of IP addresses that are running a given service.
 * Replicas that asynchronously receive the log of all decisions of the consensus algorithm but don't participate in the voting can serve read requests that don't need to be linearizable.
+
+
+## Part 3 will give you a full idea about how to piece a big system together from smaller systems. The separation of the System of record and derived data is key to understanding there.  (Chapters 10-12)
 
 ### Chapter 10: Batch Processing
 
