@@ -90,6 +90,9 @@ by Martin Kleppmann
 * Functional requirements are what an application should do.
 * Nonfunctional requirements are general properties like security, reliability, compliance, scalability, compatibility, and maintainability.
 
+  <img width="1206" alt="image" src="https://github.com/abhishekwaichal/book-notes/assets/4141167/d62c96f5-5d56-485f-8920-02c5c7f32606">
+
+
 ### Chapter 2: Data Models and Query Languages
 
 * Data models are the most important part of developing software because they affect not only how the software is written, but how we think about the problem that we're solving.
