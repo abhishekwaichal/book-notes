@@ -90,7 +90,8 @@ by Martin Kleppmann
 * Functional requirements are what an application should do.
 * Nonfunctional requirements are general properties like security, reliability, compliance, scalability, compatibility, and maintainability.
 
-  <img width="1206" alt="image" src="https://github.com/abhishekwaichal/book-notes/assets/4141167/d62c96f5-5d56-485f-8920-02c5c7f32606">
+<img width="1217" alt="image" src="https://github.com/abhishekwaichal/book-notes/assets/4141167/b0a00d49-228e-42cd-b5f3-4ac526b6f889">
+
 
 
 ### Chapter 2: Data Models and Query Languages
