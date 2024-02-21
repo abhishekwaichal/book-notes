@@ -4,13 +4,13 @@ by Martin Kleppmann
 
 ### Chapter 1: Reliable, Scalable, and Maintainable Applications
 
-* Many applications are data-intensive and not compute intensive, meaning the biggest problems are usually the amount of data, the complexity of data, and the speed at which it is changing.
+* Many ==applications are data-intensive and not compute-intensive==, meaning the biggest problems are usually the amount of data, the complexity of data, and the speed at which it is changing.
 
 #### Thinking About Data Systems
 
-* No single tool can meet all data processing and storage needs. Instead work is broken down into tasks that can be performed efficiently on a single tool, and application code stitches those tools together.
+* No single tool can meet all data processing and storage needs. Instead, work is broken down into tasks that can be performed efficiently on a single tool, and application code stitches those tools together.
 * When you create an API in front of several tools, you have created a new, special-purpose data system from smaller, general-purpose components.
-* This book focuses on three main concerns: reliability, scalability, and maintainability.
+* This chapter focuses on three main concerns: reliability, scalability, and maintainability.
 
 #### Reliability
 
@@ -21,11 +21,11 @@ by Martin Kleppmann
 
 ##### Hardware Faults
 
-* Hard disks have a MTTF of 10 to 50 years, and so on a storage cluster with 10,000 disks, we should expect on average one disk to die per day.
+* Hard disks have an MTTF of 10 to 50 years, and so on a storage cluster with 10,000 disks, we should expect on average one disk to die per day.
 
 ##### Software Errors
 
-* Systemic errors, such as leap second bugs or cascading failures, are correlated across nodes and so tend to cause more system failures than uncorrelated hardware faults.
+* Systemic errors, such as leap-second bugs or cascading failures, are correlated across nodes and so tend to cause more system failures than uncorrelated hardware faults.
 
 ##### Human Errors
 
