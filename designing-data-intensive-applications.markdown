@@ -4,7 +4,7 @@ by Martin Kleppmann
 
 ### Chapter 1: Reliable, Scalable, and Maintainable Applications
 
-* Many applications are data-intensive and not compute intensive, meaning the biggest problems are usually the amount of data, the complexity of data, and the speed at which it is changing.
+* Many `applications are data-intensive and not compute intensive`, meaning the biggest problems are usually the amount of data, the complexity of data, and the speed at which it is changing.
 
 #### Thinking About Data Systems
 
