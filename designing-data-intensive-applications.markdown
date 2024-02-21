@@ -4,13 +4,13 @@ by Martin Kleppmann
 
 ### Chapter 1: Reliable, Scalable, and Maintainable Applications
 
-* Many applications are data-intensive and not compute intensive, meaning the biggest problems are usually the amount of data, the complexity of data, and the speed at which it is changing.
+* Many applications are data-intensive and not compute-intensive, meaning the biggest problems are usually the amount of data, the complexity of data, and the speed at which it is changing.
 
 #### Thinking About Data Systems
 
-* No single tool can meet all data processing and storage needs. Instead work is broken down into tasks that can be performed efficiently on a single tool, and application code stitches those tools together.
+* No single tool can meet all data processing and storage needs. Instead, work is broken down into tasks that can be performed efficiently on a single tool, and application code stitches those tools together.
 * When you create an API in front of several tools, you have created a new, special-purpose data system from smaller, general-purpose components.
-* This book focuses on three main concerns: reliability, scalability, and maintainability.
+* This chapter focuses on three main concerns: reliability, scalability, and maintainability.
 
 #### Reliability
 
@@ -21,11 +21,11 @@ by Martin Kleppmann
 
 ##### Hardware Faults
 
-* Hard disks have a MTTF of 10 to 50 years, and so on a storage cluster with 10,000 disks, we should expect on average one disk to die per day.
+* Hard disks have an MTTF of 10 to 50 years, and so on a storage cluster with 10,000 disks, we should expect on average one disk to die per day.
 
 ##### Software Errors
 
-* Systemic errors, such as leap second bugs or cascading failures, are correlated across nodes and so tend to cause more system failures than uncorrelated hardware faults.
+* Systemic errors, such as leap-second bugs or cascading failures, are correlated across nodes and so tend to cause more system failures than uncorrelated hardware faults.
 
 ##### Human Errors
 
@@ -43,12 +43,12 @@ by Martin Kleppmann
 
 ##### Describing Performance
 
-* You can look at what happens when load increases in two ways:
+* You can look at what happens when the load increases in two ways:
   * When you increase a load parameter and keep system resources fixed, how is the performance of your system affected?
   * When you increase a load parameter, how much do you need to increase the resources if you want to keep performance unchanged?
-* Response time what the client sees, including the time to process the request (the service time) and network delays and queuing delays.
+* Response time is what the client sees, including the time to process the request (the service time) and network delays and queuing delays.
 * Latency is the duration that a request is waiting to be handled – during which it is *latent*, awaiting service.
-* The mean is not a good metrics to describe the "typical" response time, as it doesn't tell you how many users experienced that delay. Prefer percentiles instead.
+* The mean is not a good metric to describe the "typical" response time, as it doesn't tell you how many users experienced that delay. Prefer percentiles instead.
 * High percentiles of response times, or tail latencies, are important because they directly affect users' experience of the service.
 * Reducing response times at high percentiles is difficult because they are easily affected by random events outside your control, and the benefits are diminishing.
 * When artificially generating load to test scalability, the client must send requests independently of the response time, or else it will artificially keep the queues shorter than in reality, thereby skewing the measurements.
@@ -58,7 +58,7 @@ by Martin Kleppmann
 ##### Approaches for Coping with Load
 
 * Scaling up, or vertical scaling, is moving to a more powerful machine. Scaling out, or horizontal scaling, distributes the load across multiple smaller machines.
-* An architecture that scales well for a particular application is built around assumptions of operations will be common and which will be rare – the load parameters.
+* An architecture that scales well for a particular application is built around assumptions of operations that will be common and which will be rare – the load parameters.
 * In an early-stage startup it's more important to be able to iterate quickly on product features than to scale beyond some hypothetical future load.
 
 #### Maintainability
@@ -78,8 +78,8 @@ by Martin Kleppmann
 ##### Simplicity: Managing Complexity
 
 * Making a system simpler does not necessarily mean reducing its functionality; it can also mean removing *accidental complexity*.
-* Accidental complexity is complexity that is not inherent in the problem that the software solves, but arises only from the implementation.
-* Good abstractions are one of the best tools for removing accidental complexity by hiding implementation details, but finding good abstractions is very hard.
+* Accidental complexity is complexity that is not inherent in the problem that the software solves but arises only from the implementation.
+* Good abstractions are one of the best tools for removing accidental complexity by hiding implementation details but finding good abstractions is very hard.
 
 ##### Evolvability: Making Change Easy
 
@@ -92,7 +92,7 @@ by Martin Kleppmann
 
 ### Chapter 2: Data Models and Query Languages
 
-* Data models are the most important part of developing software, because they affect not only how the software is written, but how we think about the problem that we're solving.
+* Data models are the most important part of developing software because they affect not only how the software is written, but how we think about the problem that we're solving.
 * Layered software abstractions allow different groups of people to work together effectively.
 
 #### Relational Model Versus Document Model
@@ -104,11 +104,11 @@ by Martin Kleppmann
 ##### The Object-Relational Mismatch
 
 * Impedance mismatch is the disconnect between objects in the application code and the database model of tables, rows, and columns.
-* A JSON representation of a document-oriented database has better locality than an equivalent multi-table schema.
+* A JSON representation of a document-oriented database has a better locality than an equivalent multi-table schema.
 
 ##### Many-to-One and Many-to-Many Relationships
 
-* In a document-oriented database, if information is duplicated and that information is changed, then all redundant copies need to be updated. Normalization is the key idea behind removing such duplication.
+* In a document-oriented database, if the information is duplicated and that information is changed, then all redundant copies need to be updated. Normalization is the key idea behind removing such duplication.
 
 ##### Are Document Databases Repeating History?
 
