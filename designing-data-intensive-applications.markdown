@@ -196,19 +196,19 @@ by Martin Kleppmann
 
 #### Data Structures That Power Your Database
 
-* *Log* is defined as an append-only sequence of records. It doesn't have to be human-readable, and instead might be binary.
-* Well-chosen indexes speed up read queries, but every index slows down writes, because the index also needs to be updated every time data is written.
+* *Log* is defined as an append-only sequence of records. It doesn't have to be human-readable and instead might be binary.
+* Well-chosen indexes speed up read queries, but every index slows down writes because the index also needs to be updated every time data is written.
 
 ##### Hash Indexes
 
 * If new and updated values are blindly written to a log, that log can be divided into segments. Compacting a segment keeps only the most recent value for each key, discarding the older ones.
-* Since compaction makes segments much smaller (assuming a key is updated several times in one segment), compaction can also merge several segments together.
+* Since compaction makes segments much smaller (assuming a key is updated several times in one segment), compaction can also merge several segments.
 * A background thread can merge and compact segments. While it happens, the database can still serve reads from old segment files, and write requests to the latest segment file.
 * A *tombstone* marks a deleted key. When segments are merged, the tombstone tells the merging process to discard all previous values for the key.
-* Data file segments are append-only and otherwise immutable, and so they can be read concurrently by multiple threads.
+* Data file segments are append-only and otherwise immutable, so they can be read concurrently by multiple threads.
 * Append-only design is advantageous in several ways:
   * Appending and segment merging are sequential write operations, which are generally much faster than random writes.
-  * Crash recovery are much simpler if segment files are append-only or immutable, e.g. you avoid crashing while overwriting a value and leaving old and new data spliced together.
+  * Crash recovery is much simpler if segment files are append-only or immutable, e.g. you avoid crashing while overwriting a value and leaving old and new data spliced together.
   * Merging old segments avoids the problem of data files getting fragmented over time.
 
 ##### SSTables and LSM-Trees
@@ -223,7 +223,7 @@ by Martin Kleppmann
 
 * Writes update a *memtable*, or an in-memory balanced tree. When its size exceeds some threshold, it can be written to disk as an SSTable file.
 * Read requests first query the memtable and then query on-disk segments in order from newest to oldest.
-* We can append every update to a log before updating the memtable. The log is not in sorted order, but can be used to restore the memtable after a crash.
+* We can append every update to a log before updating the memtable. The log is not in sorted order but can be used to restore the memtable after a crash.
 
 ###### Making an LSM-tree out of SSTables
 
@@ -258,11 +258,11 @@ by Martin Kleppmann
 
 * *Write amplification* is where one write results in multiple writes over the database's lifetime, such as when compacting and merging SSTables.
 * Write amplification is of concern with SSDs, which can only overwrite blocks a limited number of times before wearing out.
-* LSM-trees typically sustain higher write throughput than B-trees because they sometimes have lower write-amplification, and because they sequentially write data.
+* LSM-trees typically sustain higher write throughput than B-trees because they sometimes have lower write amplification, and because they sequentially write data.
 
 ###### Downsides of LSM-trees
 
-* The bigger the database gets, the more disk bandwidth is required for compaction. But this bandwidth is limited and can increase response times at higher percentiles.
+* The bigger the database gets, the more disk bandwidth is required for compaction. However, this bandwidth is limited and can increase response times at higher percentiles.
 * Relational databases implement transaction isolation using locks on ranges of keys. Because each key exists at exactly one place in a B-tree index, those locks can be attached directly to the tree.
 
 ##### Other Indexing Structures
@@ -329,7 +329,7 @@ by Martin Kleppmann
 
 ##### Sort Order in Column Storage
 
-* In column store, the ordering of rows is irrelevant, and so inserting a new row requires simply appending to each of the column files.
+* In the column store, the ordering of rows is irrelevant, and so inserting a new row requires simply appending it to each of the column files.
 * If after choosing an order, the primary sort column does not have many distinct values, then a simple run-length encoding can compress it efficiently.
 * Run-length encoding compresses the first sort key best, as subsequent sort keys will not have such long runs of repeated values.
 
@@ -352,7 +352,10 @@ by Martin Kleppmann
 #### Summary
 
 * Analytic workloads require sequentially scanning across a large number of rows, and so indexes are much less relevant.
-* Instead it is more important to encode data compactly, in order to minimize the amount of data that the query needs to read from disk.
+* Instead it is more important to encode data compactly, to minimize the amount of data that the query needs to read from disk.
+
+<img width="1214" alt="image" src="https://github.com/abhishekwaichal/book-notes/assets/4141167/84fb23c9-40a5-4701-80a6-f54b293cc62d">
+  
 
 ### Chapter 4: Encoding and Evolution
 
