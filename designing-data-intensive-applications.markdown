@@ -672,25 +672,29 @@ by Martin Kleppmann
 
 * An operation A *happens before* another operation B if B knows about A, or depends on A, or builds on A in some way.
 * We can simply say that two operations are *concurrent* if neither happens before the other (i.e. neither knows about the other).
-* Exact time does not matter: If the network is slow, two operations can occur some time apart but still appear to be concurrent, because the network prevented one operation from being able to know about the other.
+* Exact time does not matter: If the network is slow, two operations can occur some time apart but still appear to be concurrent because the network prevented one operation from being able to know about the other.
 
 ###### Capturing the happens-before relationship
 
 * A server can determine whether two operations are concurrent by looking at version numbers – it does not need to interpret the value itself.
 * When the server receives a write with a particular version number:
-  * It can overwrite all values with that version number or below, since the client must have merged them into the new value.
-  * It must keep all values with a higher version number, because those values are concurrent with the incoming write.
+  * It can overwrite all values with that version number or below since the client must have merged them into the new value.
+  * It must keep all values with a higher version number because those values are concurrent with the incoming write.
 
 ###### Merging concurrently written values
 
 * If several operations happen concurrently, clients must clean up afterward by merging the concurrently written *sibling* values.
 * Merging sibling values is essentially the same problem as conflict resolution in multi-leader replication.
-* Merging sibling values is complex and error prone, while CRDTs can automatically merge siblings in sensible ways.
+* Merging sibling values is complex and error-prone, while CRDTs can automatically merge siblings in sensible ways.
 
 ###### Version vectors
 
 * With multiple replicas, we need to use a version number *per replica* as well as per key, so that we know which values to overwrite and which to preserve as siblings.
 * The collection of version numbers from all the replicas is called a *version vector*. It is also sometimes called a *vector clock*, even though they are not the same.
+
+<img width="1280" alt="image" src="https://github.com/abhishekwaichal/book-notes/assets/4141167/ef746570-5ed9-4348-97c1-e83fc327af9b">
+
+
 
 ### Chapter 6: Partitioning
 
@@ -735,7 +739,7 @@ by Martin Kleppmann
 
 * Rather than each partition having its own secondary index, we can construct a *global index* that covers data in all partitions.
 * Such an index is *term-partitioned* because the term you're looking for determines the partition of the index.
-* A client needs to query only the partition containing the term it wants, but a write to a single document may update multiple terms and in turn update multiple partitions of the index.
+* A client needs to query only the partition containing the term it wants, but a write to a single document may update multiple terms and in turn, update multiple partitions of the index.
 * In practice, updates to global secondary indexes are often asynchronous.
 
 #### Rebalancing Partitions
@@ -768,7 +772,7 @@ by Martin Kleppmann
 ##### Operations: Automatic or Manual Rebalancing
 
 * If not done correctly, rebalancing can overload the network or the nodes and harm the performance of other requests while it is happening.
-* If a node is overloaded, then automated rebalancing may lead other nodes to conclude the node is dead and move load away from it. This increases load on the other nodes and the network, potentially causing a cascading failure.
+* If a node is overloaded, then automated rebalancing may lead other nodes to conclude the node is dead and move the load away from it. This increases the load on the other nodes and the network, potentially causing a cascading failure.
 * While fully automated rebalancing can be convenient, it's good to have a human in the loop to prevent operational surprises.
 
 #### Request Routing
@@ -778,6 +782,9 @@ by Martin Kleppmann
 * Many distributed systems rely on a separate coordination service such as ZooKeeper to track this cluster metadata.
 * Cassandra and Riak use a *gossip protocol* among the nodes to disseminate any changes in cluster state.
 * When a random node or a routing tier makes the routing decision, clients can use DNS to find their IP addresses as their assignment changes slowly.
+
+<img width="1252" alt="image" src="https://github.com/abhishekwaichal/book-notes/assets/4141167/0a1965f9-7e55-4672-9e7e-fe8fa9e596bd">
+
 
 ### Chapter 7: Transactions
 
