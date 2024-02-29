@@ -1034,6 +1034,9 @@ by Martin Kleppmann
 * Transactions are an abstraction layer allowing applications to pretend that certain concurrency problems and certain kinds of faults don't exist.
 * Only serializable isolation protects against all types of anomalies and race conditions in a database.
 
+<img width="1188" alt="image" src="https://github.com/abhishekwaichal/book-notes/assets/4141167/4b195f16-e64d-4c5a-8dd6-27ce0562dc90">
+
+
 ### Chapter 8: The Trouble with Distributed Systems
 
 #### Faults and Partial Failures
