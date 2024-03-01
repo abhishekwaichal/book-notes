@@ -1231,6 +1231,10 @@ by Martin Kleppmann
 
 * If you can avoid opening Pandora's box and simply keep things on a single machine, it's generally worth doing so.
 * Distributed sequence number generators like Twitter's Snowflake cannot guarantee that ordering is consistent with causality, because the timescale at which blocks of IDs are assigned is longer than the timescale of database reads and writes.
+  
+<img width="1232" alt="image" src="https://github.com/abhishekwaichal/book-notes/assets/4141167/f254aba4-aa36-4b6c-8305-adbb9bd1a486">
+
+
 
 ### Chapter 9: Consistency and Consensus
 
