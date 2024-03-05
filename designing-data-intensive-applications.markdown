@@ -4,9 +4,9 @@ by Martin Kleppmann
 
 ## Index
 [Part 1](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#part-1---useful-to-teach-you-how-to-pick-data-stores--chapters-1-4)
-[Chapter 1: Reliable, Scalable, and Maintainable Applications](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-1-reliable-scalable-and-maintainable-applications)
-[Chapter 2: Data Models and Query Languages](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-2-data-models-and-query-languages)
-[Chapter 3: Storage and Retrieval](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-3-storage-and-retrieval)
+- [Chapter 1: Reliable, Scalable, and Maintainable Applications](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-1-reliable-scalable-and-maintainable-applications)
+- [Chapter 2: Data Models and Query Languages](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-2-data-models-and-query-languages)
+- [Chapter 3: Storage and Retrieval](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-3-storage-and-retrieval)
 
 
 ## Part 1 - useful to teach you how to pick data stores  (Chapters 1-4)
