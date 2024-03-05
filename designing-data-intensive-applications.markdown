@@ -1502,6 +1502,9 @@ by Martin Kleppmann
 * ZooKeeper, etc, and consul are often used for *service discovery*, which returns the set of IP addresses that are running a given service.
 * Replicas that asynchronously receive the log of all decisions of the consensus algorithm but don't participate in the voting can serve read requests that don't need to be linearizable.
 
+<img width="1250" alt="image" src="https://github.com/abhishekwaichal/book-notes/assets/4141167/27a71e4c-a8f4-49bc-b92a-b6f32ea4355c">
+
+
 
 ## Part 3 will give you a full idea about how to piece a big system together from smaller systems. The separation of the System of record and derived data is key to understanding there.  (Chapters 10-12)
 
