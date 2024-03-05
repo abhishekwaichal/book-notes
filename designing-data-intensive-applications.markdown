@@ -11,11 +11,21 @@ by Martin Kleppmann
 
 [Part 2](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#part-2---will-dispel-your-fears-of-sharding-and-choosing-a-replication-mechanism-chapters-5-9)
 - [Chapter 5: Replication](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-5-replication)
+- [Chapter 6: Partitioning](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-6-partitioning)
+- [Chapter 7: Transactions](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-7-transactions)
+- [Chapter 8: The Trouble with Distributed Systems](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-8-the-trouble-with-distributed-systems)
+- [Chapter 9: Consistency and Consensus](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-9-consistency-and-consensus)
+
+[Part 3](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#part-3-will-give-you-a-full-idea-about-how-to-piece-a-big-system-together-from-smaller-systems-the-separation-of-the-system-of-record-and-derived-data-is-key-to-understanding-there--chapters-10-12)
+[Chapter 10: Batch Processing](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-10-batch-processing)
+[Chapter 11: Stream Processing](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-11-stream-processing)
+[Chapter 12: The Future of Data Systems](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-12-the-future-of-data-systems)
 
 
 ## Part 1 - useful to teach you how to pick data stores  (Chapters 1-4)
 
-### Chapter 1: Reliable, Scalable, and Maintainable Applications
+### Chapter 1: Reliable, Scalable, and Maintainable Applications 
+[index](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#index)
 
 * Many applications are data-intensive and not compute-intensive, meaning the biggest problems are usually the amount of data, the complexity of data, and the speed at which it is changing.
 
@@ -108,6 +118,7 @@ by Martin Kleppmann
 
 
 ### Chapter 2: Data Models and Query Languages
+[index](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#index)
 
 * Data models are the most important part of developing software because they affect not only how the software is written, but how we think about the problem that we're solving.
 * Layered software abstractions allow different groups of people to work together effectively.
@@ -202,6 +213,7 @@ by Martin Kleppmann
 
 
 ### Chapter 3: Storage and Retrieval
+[index](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#index)
 
 * There is a big difference between storage engines optimized for transactional workloads and those optimized for analytics.
 
@@ -369,6 +381,7 @@ by Martin Kleppmann
   
 
 ### Chapter 4: Encoding and Evolution
+[index](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#index)
 
 * Backward compatibility means newer code can read data written by older code. Forward compatibility means older code can read data written by newer code.
 * Forward compatibility is trickier because it requires older code to ignore additions made by a newer version of the code.
@@ -497,6 +510,7 @@ by Martin Kleppmann
 ## Part 2 - Will dispel your fears of sharding and choosing a replication mechanism (Chapters 5-9)
 
 ### Chapter 5: Replication
+[index](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#index)
 
 * Reasons to replicate data include reducing access latency by moving data geographically close to users, increasing availability, and increasing read-throughput.
 * All the difficulty in replication lies in handling *changes* to replicated data.
@@ -708,6 +722,7 @@ by Martin Kleppmann
 
 
 ### Chapter 6: Partitioning
+[index](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#index)
 
 * Partitioning enables scalability: By distributing data across many disks, the query load can be distributed across many processors.
 
@@ -798,6 +813,7 @@ by Martin Kleppmann
 
 
 ### Chapter 7: Transactions
+[index](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#index)
 
 * Transactions *simplify the programming model* for applications accessing a database.
 * A *safety guarantee* is when the database prevents a potential error and concurrency issue, and so the application does not have to compensate for it.
@@ -1050,6 +1066,7 @@ by Martin Kleppmann
 
 
 ### Chapter 8: The Trouble with Distributed Systems
+[index](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#index)
 
 #### Faults and Partial Failures
 
@@ -1250,6 +1267,7 @@ by Martin Kleppmann
 
 
 ### Chapter 9: Consistency and Consensus
+[index](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#index)
 
 * The best way of building fault-tolerant systems is to find some general-purpose abstractions with useful guarantees, implement them once, and then let applications rely on them.
 * *Split brain* is when nodes believe they are the leader, and it often leads to data loss.
