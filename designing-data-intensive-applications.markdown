@@ -7,6 +7,9 @@ by Martin Kleppmann
 - [Chapter 1: Reliable, Scalable, and Maintainable Applications](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-1-reliable-scalable-and-maintainable-applications)
 - [Chapter 2: Data Models and Query Languages](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-2-data-models-and-query-languages)
 - [Chapter 3: Storage and Retrieval](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-3-storage-and-retrieval)
+- [Chapter 4: Encoding and Evolution](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-4-encoding-and-evolution)
+[Part 2](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#part-2---will-dispel-your-fears-of-sharding-and-choosing-a-replication-mechanism-chapters-5-9)
+- [Chapter 5: Replication](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-5-replication)
 
 
 ## Part 1 - useful to teach you how to pick data stores  (Chapters 1-4)
