@@ -1506,6 +1506,7 @@ by Martin Kleppmann
 ## Part 3 will give you a full idea about how to piece a big system together from smaller systems. The separation of the System of record and derived data is key to understanding there.  (Chapters 10-12)
 
 ### Chapter 10: Batch Processing
+[index](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#index)
 
 * There are three types of systems:
   * Services (online systems), where servers wait for a request to arrive and then attempt to send a response back as quickly as possible. Availability and response time are most important metrics.
@@ -1733,6 +1734,7 @@ by Martin Kleppmann
 * Callback functions like mappers and reducers are assumed to be stateless and without side-effects, allowing the framework to hide some of the hard distributed systems problems behind its abstraction.
 
 ### Chapter 11: Stream Processing
+[index](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#index)
 
 * A lot of data is unbounded because it changes gradually over time. Batch processors just artificially divide the data into chunks of fixed duration.
 * The problem with daily batch processes is that changes in the input are only reflected in the output a day later, which is too slow for many impatient users.
@@ -2007,6 +2009,7 @@ by Martin Kleppmann
   * *Table-table joins*: Both input streams are database changelogs. The result is a stream of changes to the materialized view of the join between the two tables.
 
 ### Chapter 12: The Future of Data Systems
+[index](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#index)
 
 #### Data Integration
 
