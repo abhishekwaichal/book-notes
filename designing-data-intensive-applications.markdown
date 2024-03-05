@@ -2,6 +2,9 @@
 
 by Martin Kleppmann
 
+## Index
+[Chapter 1: Reliable, Scalable, and Maintainable Applications](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-1-reliable-scalable-and-maintainable-applications)
+
 ## Part 1 - useful to teach you how to pick data stores  (Chapters 1-4)
 
 ### Chapter 1: Reliable, Scalable, and Maintainable Applications
