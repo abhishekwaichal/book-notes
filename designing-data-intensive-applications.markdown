@@ -377,7 +377,8 @@ by Martin Kleppmann
 * Analytic workloads require sequentially scanning across a large number of rows, and so indexes are much less relevant.
 * Instead it is more important to encode data compactly, to minimize the amount of data that the query needs to read from disk.
 
-<img width="1214" alt="image" src="https://github.com/abhishekwaichal/book-notes/assets/4141167/84fb23c9-40a5-4701-80a6-f54b293cc62d">
+<img width="1263" alt="image" src="https://github.com/abhishekwaichal/book-notes/assets/4141167/d7788c81-98a4-4085-9007-4d2c03221916">
+
   
 
 ### Chapter 4: Encoding and Evolution
