@@ -503,7 +503,7 @@ by Martin Kleppmann
 * In a *distributed actor framework*, location transparency works better than with RPC, because the actor model already assumes that messages may be lost.
 * A distributed actor framework essentially integrates a message broker and the actor programming model into a single framework.
 
-<img width="1133" alt="image" src="https://github.com/abhishekwaichal/book-notes/assets/4141167/ab7de908-1117-476d-b2c0-c38e997e316d">
+<img width="1263" alt="image" src="https://github.com/abhishekwaichal/book-notes/assets/4141167/9be85b89-a3c6-434a-a43f-f3c856459b6c">
 
 
 
