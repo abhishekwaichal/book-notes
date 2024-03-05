@@ -17,9 +17,9 @@ by Martin Kleppmann
 - [Chapter 9: Consistency and Consensus](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-9-consistency-and-consensus)
 
 [Part 3](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#part-3-will-give-you-a-full-idea-about-how-to-piece-a-big-system-together-from-smaller-systems-the-separation-of-the-system-of-record-and-derived-data-is-key-to-understanding-there--chapters-10-12)
-[Chapter 10: Batch Processing](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-10-batch-processing)
-[Chapter 11: Stream Processing](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-11-stream-processing)
-[Chapter 12: The Future of Data Systems](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-12-the-future-of-data-systems)
+- [Chapter 10: Batch Processing](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-10-batch-processing)
+- [Chapter 11: Stream Processing](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-11-stream-processing)
+- [Chapter 12: The Future of Data Systems](https://github.com/abhishekwaichal/book-notes/blob/master/designing-data-intensive-applications.markdown#chapter-12-the-future-of-data-systems)
 
 
 ## Part 1 - useful to teach you how to pick data stores  (Chapters 1-4)
